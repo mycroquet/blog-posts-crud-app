@@ -1,0 +1,8 @@
+<h1>Blog Posts</h1>
+
+<ul>
+  {{#each posts}}
+  <li><a href="/{{this.id}}">{{this.title}}</a></li>
+  <li><a href="/{{this.id}}">{{this.date_created}}</a></li>
+  {{/each}}
+</ul>
