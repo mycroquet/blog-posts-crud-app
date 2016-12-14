@@ -1,8 +1,22 @@
 <h1>Blog Posts</h1>
+<a class="waves-effect waves-light btn" href="/create">New Post</a>
 
-<ul>
-  {{#each posts}}
-  <li><a href="/{{this.id}}">{{this.title}}</a></li>
-  <li><a href="/{{this.id}}">{{this.date_created}}</a></li>
-  {{/each}}
-</ul>
+<table class="highlight">
+    <thead>
+        <tr>
+            <th data-field="id">Title</th>
+            <th data-field="name">Posted Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each posts}}
+
+            <tr>
+                <td><a href="/{{this.id}}">{{this.title}}</a></td>
+                <td id="date">{{this.date_created}}</td>
+            </tr>
+
+        {{/each}}
+    </tbody>
+</table>

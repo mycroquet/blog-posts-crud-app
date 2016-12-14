@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 2em;
+    padding: 2em;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100vw;
+    padding: 1em !important;
+}
+
+nav {
+    margin-bottom: 2em;
 }

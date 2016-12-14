@@ -1,0 +1,25 @@
+<div class="row">
+    <form class="col s12" method="post" action="/create">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="first_name" name="name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input type="text" name="title" class="validate">
+          <label for="title">Blog Title</label>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s6">
+            <textarea id="textarea1" name="body" class="materialize-textarea" length="2000"></textarea>
+            <label for="textarea1">Start Writing</label>
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn" type="submit" name="postBlog">Post</button>
+    </form>
+  </div>
