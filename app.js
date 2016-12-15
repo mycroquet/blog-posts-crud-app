@@ -7,6 +7,7 @@ var favicon = require('serve-favicon')
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(methodOverride('_method'));
 app.use('/', index);
 app.use('/users', users);
 

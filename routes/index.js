@@ -75,6 +75,7 @@ router.get('/:id', function(req, res) {
 
 // deletes blog
 router.delete('/:id', function(req, res) {
+  console.log(req.params.id);
     knex('blog')
         .where('id', req.params.id)
         .del()
