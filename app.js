@@ -4,10 +4,10 @@ var path = require('path')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 
-
+var methodOverride = require('method-override');
 var index = require('./routes/index');
 var users = require('./routes/users');
-var methodOverride = require('method-override');
+
 
 var app = express();
 
