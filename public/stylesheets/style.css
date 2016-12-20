@@ -1,11 +1,26 @@
 body {
-    margin: 2em;
-    padding: 2em;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+
+input-field {
+  display: block;
+}
+
+.create {
+  width: 70vw;
 }
 
 a {
     color: #00B7FF;
+}
+
+.brand-logo {
 }
 
 .nav-wrapper {
@@ -13,9 +28,9 @@ a {
     flex-flow: column;
     align-items: flex-start;
     width: 100vw;
-    padding: 1em !important;
+    padding-left: 1em !important;
 }
 
 nav {
-    margin-bottom: 2em;
+    margin-bottom: 2em !important;
 }
