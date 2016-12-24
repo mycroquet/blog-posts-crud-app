@@ -4,6 +4,7 @@ var knex = require('../db/knex')
 
 /* GET home page. */
 router.get('/', function(req, res) {
+  req.app.locals.title = 'Posts'
     knex('blog')
         .select()
         .then(function(posts) {
@@ -29,7 +30,7 @@ router.post('/create', function(req, res) {
         })
         .returning('id')
         .then(function(data) {
-            res.redirect('/' + data)
+            res.redirect('/posts/' + data)
         });
 })
 
@@ -56,7 +57,7 @@ router.post('/update/:id', function(req, res) {
             body: req.body.body
         })
         .then(function(data) {
-            res.redirect('/' + req.params.id)
+            res.redirect('/posts/' + req.params.id)
         });
 })
 
@@ -67,6 +68,7 @@ router.get('/:id', function(req, res) {
         .where('id', req.params.id)
         .first()
         .then(function(posts) {
+          req.app.locals.title = posts.title
             res.render('details', {
                 posts: posts
             })
@@ -80,7 +82,7 @@ router.delete('/:id', function(req, res) {
         .where('id', req.params.id)
         .del()
         .then(function() {
-            res.redirect('/')
+            res.redirect('/posts')
         });
 })
 

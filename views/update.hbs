@@ -1,21 +1,21 @@
 <div class="row">
-    <form class="col s12" method="post" action="/update/{{data.id}}">
+    <form class="update" method="post" action="/posts/update/{{data.id}}">
       <div class="row">
-        <div class="input-field col s4">
-          <input id="first_name" name="name" type="text" class="validate" value="{{data.name}}">
+        <div class="input-field">
+          <input id="first_name" name="name" type="text" class="validate col s6" value="{{data.name}}">
           <label for="first_name">First Name</label>
         </div>
       </div>
 
       <div class="row">
-        <div class="input-field col s4">
-          <input type="text" name="title" class="validate" value="{{data.title}}">
+        <div class="input-field">
+          <input type="text" name="title" class="validate col s6" value="{{data.title}}">
           <label for="title">Blog Title</label>
         </div>
       </div>
 
       <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field">
             <textarea id="textarea1" name="body" class="materialize-textarea" length="2000">{{data.body}}</textarea>
             <label for="textarea1">Start Editing</label>
         </div>

@@ -1,16 +1,16 @@
 {{#posts}}
-    <h1>{{title}}</h1>
-    <form action="/{{id}}?_method=DELETE" method="post">
-        <a class="waves-effect waves-light btn red accent-4" href="/update/{{id}}">Edit Post</a>
-        <button type="submit" class="btn btn-default">Delete Post</button>
-    </form>
-    <p>
-        By {{name}}
-    </p>
-    <p>
-        Posted on {{date_created}}
-    </p>
-    <p>
-        {{body}}
-    </p>
+        <form action="/posts/{{id}}?_method=DELETE" method="post">
+            <a class="waves-effect waves-light btn" href="/posts/update/{{id}}">Edit Post</a>
+            <button type="submit" class="btn btn-default red accent-4">Delete Post</button>
+        </form>
+    <section>
+        <div id="author-info">
+            <h4>By {{name}}</h4>
+            <h4>Posted on {{date_created}}</h4>
+        </div>
+
+        <div id="post-body">
+            <p>{{body}}</p>
+        </div>
+    </section>
 {{/posts}}

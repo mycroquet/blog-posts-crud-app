@@ -1,18 +1,56 @@
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #e8f5e9;
 }
 
-.container {
+header {
+  margin-left: 2em;
   width: 70vw;
   display: flex;
   justify-content: center;
 }
 
-input-field {
+form {
   display: block;
 }
 
+
+
+.container {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+input-field {
+    display: block;
+}
+
+.post {
+    display: block;
+}
+
+#author-info {
+  color: red;
+  display: block;
+  width: 70vw ;
+}
+
+
+#edit-delete {
+  display: block;
+}
+
+#post-body {
+    display: block;
+    width: 70vw;
+}
+
 .create {
+    width: 70vw;
+}
+
+.update {
   width: 70vw;
 }
 
@@ -20,17 +58,34 @@ a {
     color: #00B7FF;
 }
 
-.brand-logo {
+.title {
+  display: flex;
+  flex-flow: row;
+  width: 70vw;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: .9em;
 }
 
 .nav-wrapper {
     display: flex;
     flex-flow: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100vw;
     padding-left: 1em !important;
 }
 
 nav {
-    margin-bottom: 2em !important;
+    margin-bottom: 1em !important;
+    background-color: #1976d2;
+}
+
+.blog-list {
+  width: 70vw;
+  margin-left: 1em;
 }
